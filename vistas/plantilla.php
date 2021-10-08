@@ -66,7 +66,7 @@ CUERPO DOCUMENTO
     if (isset($_GET["ruta"])) {
         if (
             $_GET["ruta"] == "Inicio" ||
-            $_GET["ruta"] == "Usuarios" ||
+            $_GET["ruta"] == "Registro" ||
             $_GET["ruta"] == "Residentes" ||
             $_GET["ruta"] == "Docentes" ||
             $_GET["ruta"] == "Directorio" ||

@@ -34,7 +34,7 @@
                                   <a href="Inicio"><i class="fa fa-home fa-2x" style="color: #845ef7;"></i><span><strong>Inicio</strong></span></a>
                               </li>
                               <li>
-                                  <a href="Usuarios"><i class="fa fa-user fa-2x" style="color: #845ef7;"></i><span><strong>Usuarios</strong></span></a>
+                                  <a href="Registro"><i class="fas fa-user-plus fa-2x" style="color: #845ef7;"></i><span><strong>Registro</strong></span></a>
                               </li>
                               <li>
                                   <a href="Residentes"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Residentes</strong></span></a>
