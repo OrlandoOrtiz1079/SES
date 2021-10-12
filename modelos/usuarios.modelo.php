@@ -25,19 +25,25 @@ class ModeloUsuarios
 		$stmt->close();
 		$stmt = null;
 	}
-	
+
 	/*=============================================
-	REGISTRO DE USUARIOS
+	REGISTRO DE ALUMNOS
 	=============================================*/
 
-	static public function mdlIngresarUsuario($tabla, $datos)
+	static public function mdlIngresarAlumnos($tabla, $datos)
 	{
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, usuario, password, perfil) VALUES (:nombre, :usuario, :password, :perfil)");
+
+
+
+
+		
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, nocontrol, carrera, entrada, enhora) VALUES (:nombre, :nocontrol, :carrera, :entrada, :enhora)");
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		$stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
-		$stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
-		$stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
+		$stmt->bindParam(":nocontrol", $datos["nocontrol"], PDO::PARAM_STR);
+		$stmt->bindParam(":carrera", $datos["carrera"], PDO::PARAM_STR);
+		$stmt->bindParam(":entrada", $datos["entrada"], PDO::PARAM_STR);
+		$stmt->bindParam(":enhora", $datos["enhora"], PDO::PARAM_STR);
 		/* $stmt->bindParam(" :estado", 1, PDO::PARAM_INT); */
 
 		if ($stmt->execute()) {
@@ -45,7 +51,7 @@ class ModeloUsuarios
 		} else {
 			return "error";
 		}
-		$stmt->close();
+		$stmt-> close();
 		$stmt = null;
 	}
 	/*=============================================
