@@ -6,26 +6,35 @@ class ModeloAlumnos
 {
 
 	/*=============================================
-	MOSTRAR USUARIOS
+	MOSTRAR Alumnos
 	=============================================*/
 
-	static public function MdlMostrarUsuarios($tabla, $entrada, $control)
+	static public function MdlMostrarAlumnos($tabla, $entrada, $control)
 	{
 
-											// SELECT * FROM alumnos WHERE nocontrol="17670034" AND entrada="12-10-2021"
-		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $control = :$control AND $entrada= :$entrada");
-		$stmt->bindParam(":" . $entrada, $entrada, PDO::PARAM_STR);
-		$stmt->bindParam(":" . $control, $control, PDO::PARAM_STR);
+		// SELECT * FROM alumnos WHERE nocontrol="17670034" AND entrada="12-10-2021"
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE nocontrol = :nocontrol and  entrada= :entrada");
+		$stmt->bindParam(":nocontrol", $control, PDO::PARAM_STR);
+		$stmt->bindParam(":entrada", $entrada, PDO::PARAM_STR);
+
 		$stmt->execute();
+		if (empty($stmt->fetch())) {
+			return "error";
+		} else {
+			return "ok";
+		}
+
+
 		return $stmt->fetch();
-		echo $stmt;
+
 
 
 		$stmt->close();
 		$stmt = null;
 	}
 
-	static public function mdlActualizarAlumons($tabla, $item1, $valor1, $item2, $valor2){
+	static public function mdlActualizarAlumons($tabla, $item1, $valor1, $item2, $valor2)
+	{
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE $item2 = :$item2");
 
 		$stmt->bindParam(":" . $item1, $valor1, PDO::PARAM_STR);
@@ -37,7 +46,8 @@ class ModeloAlumnos
 			return "error";
 		}
 		$stmt->close();
-		$stmt = null;}
+		$stmt = null;
+	}
 
 
 	/*=============================================
@@ -61,7 +71,7 @@ class ModeloAlumnos
 			return "error";
 		}
 		$stmt->close();
-		// $stmt = null;
+	    $stmt = null;
 	}
 	/*=============================================
 	EDITAR USUARIO

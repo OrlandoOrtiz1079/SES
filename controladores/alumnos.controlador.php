@@ -15,30 +15,31 @@ class ControladorAlumnos
             $TimeEntrada = $Object->format("h:i:s a");
 
             $tabla = "alumnos";
-          
-            
-            $control = $_POST["nocontrol"];
+            // $control = ;
 
-            echo   $control = $_POST["nocontrol"];
-            echo $DateEntrada;
-            $respuesta1 = ModeloAlumnos::MdlMostrarUsuarios($tabla, $DateEntrada, $control);
+            $validarAlumno = ModeloAlumnos::MdlMostrarAlumnos($tabla, $DateEntrada, $_POST["nocontrol"]);
 
+            if ($validarAlumno == 'ok') {
+                echo '<script>
+                swal("Good job!", "You clicked the button!", "warning");
+             </script>';
+            } else {
+                $datos = array(
+                    "nombre" => $_POST["nombre"],
+                    "nocontrol" => $_POST["nocontrol"],
+                    "carrera" => $_POST["carrera"],
+                    "entrada" => $DateEntrada,
+                    "enhora" => $TimeEntrada,
+                );
+                $respuesta = ModeloAlumnos::mdlIngresarAlumnos($tabla, $datos);
 
-            // $datos = array(
-            //     "nombre" => $_POST["nombre"],
-            //     "nocontrol" => $_POST["nocontrol"],
-            //     "carrera" => $_POST["carrera"],
-            //     "entrada" => $DateEntrada,
-            //     "enhora" => $TimeEntrada,
-            // );
-            // $respuesta = ModeloAlumnos::mdlIngresarAlumnos($tabla, $datos);
+                if ($respuesta == 'ok') {
 
-            // if ($respuesta == 'ok') {
-
-            //     echo '<script>
-            //     swal("Good job!", "You clicked the button!", "success");
-            //  </script>';
-            // }
+                    echo '<script>
+                swal("Good job!", "You clicked the button!", "success");
+             </script>';
+                }
+            }
         }
     }
     /*=============================================
