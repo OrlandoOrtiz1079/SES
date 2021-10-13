@@ -23,22 +23,23 @@ class ModeloAlumnos
 		} else {
 			return "ok";
 		}
-
-
 		return $stmt->fetch();
-
-
 
 		$stmt->close();
 		$stmt = null;
 	}
 
-	static public function mdlActualizarAlumons($tabla, $item1, $valor1, $item2, $valor2)
+	/*=============================================
+	ACTUALIZAR Alumnos
+	=============================================*/
+	static public function mdlActualizarAlumons($tabla, $TimeSalida, $control, $DateEntrada)
 	{
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE $item2 = :$item2");
-
-		$stmt->bindParam(":" . $item1, $valor1, PDO::PARAM_STR);
-		$stmt->bindParam(":" . $item2, $valor2, PDO::PARAM_STR);
+		
+		//UPDATE alumnos SET sahora="01:00:11 am" WHERE nocontrol="17670004" AND entrada="13-10-2021"
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET sahora = :sahora WHERE nocontrol = :nocontrol AND entrada = :entrada");
+		$stmt->bindParam(":sahora", $TimeSalida, PDO::PARAM_STR);
+		$stmt->bindParam(":nocontrol", $control, PDO::PARAM_STR);
+		$stmt->bindParam(":entrada", $DateEntrada, PDO::PARAM_STR);
 
 		if ($stmt->execute()) {
 			return "ok";
