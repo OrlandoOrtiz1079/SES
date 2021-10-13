@@ -2,29 +2,43 @@
 
 require_once "conexion.php";
 
-class ModeloUsuarios
+class ModeloAlumnos
 {
 
 	/*=============================================
 	MOSTRAR USUARIOS
 	=============================================*/
 
-	static public function MdlMostrarUsuarios($tabla, $item, $valor)
+	static public function MdlMostrarUsuarios($tabla, $entrada, $control)
 	{
 
-		if ($item != null) {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
-			$stmt->bindParam(":" . $item, $valor, PDO::PARAM_STR);
-			$stmt->execute();
-			return $stmt->fetch();
-		} else {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
-			$stmt->execute();
-			return $stmt->fetchAll();
-		}
+											// SELECT * FROM alumnos WHERE nocontrol="17670034" AND entrada="12-10-2021"
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $control = :$control AND $entrada= :$entrada");
+		$stmt->bindParam(":" . $entrada, $entrada, PDO::PARAM_STR);
+		$stmt->bindParam(":" . $control, $control, PDO::PARAM_STR);
+		$stmt->execute();
+		return $stmt->fetch();
+		echo $stmt;
+
+
 		$stmt->close();
 		$stmt = null;
 	}
+
+	static public function mdlActualizarAlumons($tabla, $item1, $valor1, $item2, $valor2){
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE $item2 = :$item2");
+
+		$stmt->bindParam(":" . $item1, $valor1, PDO::PARAM_STR);
+		$stmt->bindParam(":" . $item2, $valor2, PDO::PARAM_STR);
+
+		if ($stmt->execute()) {
+			return "ok";
+		} else {
+			return "error";
+		}
+		$stmt->close();
+		$stmt = null;}
+
 
 	/*=============================================
 	REGISTRO DE ALUMNOS
@@ -32,11 +46,6 @@ class ModeloUsuarios
 
 	static public function mdlIngresarAlumnos($tabla, $datos)
 	{
-
-
-
-
-		
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, nocontrol, carrera, entrada, enhora) VALUES (:nombre, :nocontrol, :carrera, :entrada, :enhora)");
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -51,8 +60,8 @@ class ModeloUsuarios
 		} else {
 			return "error";
 		}
-		$stmt-> close();
-		$stmt = null;
+		$stmt->close();
+		// $stmt = null;
 	}
 	/*=============================================
 	EDITAR USUARIO

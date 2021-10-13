@@ -38,6 +38,8 @@ session_start();
     <!-- sweetalert2 -->
     <script src="vistas/assets/js/sweetalert2.all.min.js"></script>
     <!-- Bootstrap CSS -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    
     <script>
         function mayus(e) {

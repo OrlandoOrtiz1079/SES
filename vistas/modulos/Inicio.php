@@ -12,38 +12,38 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                
+
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item ">
-                    <img src="vistas/assets/images/Carrucel/1.jpeg" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/1.jpeg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/2.jpg" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/2.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/3.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/3.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/4.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/4.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item active">
-                    <img src="vistas/assets/images/Carrucel/5.jpg" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/5.jpg" class="d-block w-100">
                 </div>
                 <div class="carousel-item ">
-                    <img src="vistas/assets/images/Carrucel/6.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/6.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/7.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/7.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/8.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/8.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/9.png" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/9.png" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="vistas/assets/images/Carrucel/10.jpeg" class="d-block w-100" >
+                    <img src="vistas/assets/images/Carrucel/10.jpeg" class="d-block w-100">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

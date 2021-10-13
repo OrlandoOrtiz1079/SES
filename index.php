@@ -4,7 +4,7 @@
 //$ruta = "http://localhost/sdr/";
 //$ruta = "C:laragon/www/SDR/";
 require_once "controladores/plantilla.controlador.php";
-require_once "controladores/usuarios.controlador.php";
+require_once "controladores/alumnos.controlador.php";
 require_once "controladores/residentes.controlador.php";
 require_once "controladores/docentes.controlador.php";
 require_once "controladores/directorio.controlador.php";

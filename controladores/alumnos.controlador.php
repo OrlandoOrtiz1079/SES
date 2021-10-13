@@ -6,55 +6,40 @@ class ControladorAlumnos
     =============================================*/
     public static function ctrCrearAlumno()
     {
-                $Object = new DateTime(); 
-                
-                $Object->setTimezone(new DateTimeZone('America/Mexico_City'));
-                $DateEntrada = $Object->format("d-m-Y");  
-                $TimeEntrada = $Object->format("h:i:s a");  
+        if (empty($_POST['nombre']) && empty($_POST['nocontrol']) && empty($_POST['carrera'])) {
+        } else {
 
-                    $tabla = "alumnos";
-                  
-                    $datos = array(
-                        "nombre" => $_POST["nombre"],
-                        "nocontrol" => $_POST["nocontrol"],
-                        "carrera" => $_POST["carrera"],
-                        "entrada"=> $DateEntrada,
-                        "enhora" => $TimeEntrada,
-                    );
+            $Object = new DateTime();
+            $Object->setTimezone(new DateTimeZone('America/Mexico_City'));
+            $DateEntrada = $Object->format("d-m-Y");
+            $TimeEntrada = $Object->format("h:i:s a");
 
-                    $respuesta = ModeloUsuarios::mdlIngresarAlumnos($tabla, $datos);
-                    if ($respuesta == "ok") {
-                        echo '<script>
-				   Swal.fire({
-						type: "success",
-					   title: "¡Registrado Correctamente!",
-					   showConfirmButton: true,
-					   confirmButtonText: "Cerrar",
-					   closeOnConfirm: false
-				   }).then((result)=>{
-					   if(result.value){
-						   window.location = "Usuarios";
-					   }
-					   
-				 </script>';
-                    
-            //     }
-            } else {
-                echo '<script>
-				   Swal.fire({
-						type: "error",
-					   title: "¡El usuario no puede estar vacio o llevar caracteres especiales!",
-					   showConfirmButton: true,
-					   confirmButtonText: "Cerrar",
-					   closeOnConfirm: false
-				   }).then((result)=>{
-					   if(result.value){
-						   window.location = "Usuarios";
-					   }
-					   });
-				 </script>';
-            }
-        
+            $tabla = "alumnos";
+          
+            
+            $control = $_POST["nocontrol"];
+
+            echo   $control = $_POST["nocontrol"];
+            echo $DateEntrada;
+            $respuesta1 = ModeloAlumnos::MdlMostrarUsuarios($tabla, $DateEntrada, $control);
+
+
+            // $datos = array(
+            //     "nombre" => $_POST["nombre"],
+            //     "nocontrol" => $_POST["nocontrol"],
+            //     "carrera" => $_POST["carrera"],
+            //     "entrada" => $DateEntrada,
+            //     "enhora" => $TimeEntrada,
+            // );
+            // $respuesta = ModeloAlumnos::mdlIngresarAlumnos($tabla, $datos);
+
+            // if ($respuesta == 'ok') {
+
+            //     echo '<script>
+            //     swal("Good job!", "You clicked the button!", "success");
+            //  </script>';
+            // }
+        }
     }
     /*=============================================
     MOSTRAR USUARIO
