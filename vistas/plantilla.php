@@ -10,7 +10,6 @@ session_start();
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SISTEMA DE CONTROL DE E/S</title>
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="vistas/assets/images/icon/favicon.ico">
@@ -40,14 +39,12 @@ session_start();
     <!-- Bootstrap CSS -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-   
+
     <script>
         function mayus(e) {
             e.value = e.value.toUpperCase();
         }
     </script>
-
-
 
 </head>
 
@@ -79,6 +76,9 @@ CUERPO DOCUMENTO
             include "modulos/404.php";
         }
     }
+    if (!isset($_GET["ruta"])) {
+        include "modulos/Inicio.php";
+    }
     include "modulos/footer.php";
 
     echo '</div>';
@@ -86,7 +86,7 @@ CUERPO DOCUMENTO
 
     ?>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
     <!-- jquery latest version -->
     <!-- <script src="vistas/assets/js/vendor/jquery-2.2.4.min.js"></script> -->
     <script src="vistas/assets/js/vendor/jquery-3.4.0.min.js"></script>

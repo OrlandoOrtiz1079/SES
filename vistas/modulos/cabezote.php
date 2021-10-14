@@ -5,14 +5,14 @@
           <div class="row align-items-center">
               <div class="col-md-3 d-none d-md-block">
                   <div class="logo">
-                      <!-- <a href="Inicio"><img src="vistas/assets/images/icon/logo-1.svg" alt="logo"></a> -->
+                      <a href="Inicio"><img src="vistas/assets/images/icon/SCES.png" alt="logo"></a>
                       <a href="Inicio" class="ml-3"><img src="vistas/assets/images/icon/LogoDSC.svg" alt="logo"></a>
                   </div>
               </div>
               <div class="col-12 d-block d-md-none pt-2 pb-2">
                   <div class="col clearfix">
                       <div class="logo d-flex justify-content-center">
-                          <a href="Inicio" class="m-2"><img src="vistas/assets/images/icon/logo-1.svg" alt="logo"></a>
+                          <a href="Inicio" class="m-2"><img src="vistas/assets/images/icon/SCES.png" alt="logo"></a>
                           <a href="Inicio"><img src="vistas/assets/images/icon/LogoDSC.svg" alt="logo"></a>
                       </div>
                   </div>
