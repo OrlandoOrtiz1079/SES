@@ -70,7 +70,7 @@ CUERPO DOCUMENTO
             $_GET["ruta"] == "Inicio" ||
             $_GET["ruta"] == "Registro" ||
             $_GET["ruta"] == "Accesos" ||
-            $_GET["ruta"] == "Docentes" ||
+            $_GET["ruta"] == "Accesogeneral" ||
             $_GET["ruta"] == "Directorio" ||
             $_GET["ruta"] == "Jerarquia" ||
             $_GET["ruta"] == "CerrarSesion"

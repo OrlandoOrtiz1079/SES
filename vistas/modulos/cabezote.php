@@ -40,7 +40,7 @@
                                   <a href="Accesos"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Accesos del dia</strong></span></a>
                               </li>
                               <li>
-                                  <a href="Docentes"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Docentes</strong></span></a>
+                                  <a href="Accesogeneral"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Acceso General</strong></span></a>
                               </li>
                               <li>
                                   <a href="Directorio"><i class="fa fa-phone fa-2x" style="color: #845ef7;"></i><span><strong> Directorio</strong></span></a>
