@@ -28,9 +28,9 @@ class ControladorMostrarAlunmosG
                             <td>' ?>
                                  <?php
                                     if (empty($value["sahora"])) {
-                                        echo "Dentro del Tec";
+                                        echo '<label style="color: white; background-color: red;"><strong> Dentro del la Institución </strong></label>';
                                     } else {
-                                        echo $value["sahora"];
+                                        echo  '<label style="color: white; background-color: green;"> <strong>' . $value["sahora"] . ' </strong></label>';
                                     }
                                     ?>
                                 <?php

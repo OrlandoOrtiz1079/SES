@@ -52,7 +52,7 @@ session_start();
 CUERPO DOCUMENTO
 ======================================-->
 
-<body class="body-bg">
+<body style="background: url(vistas/assets/images/fondo.png); background-color: #F3F8FB">
 
     <div id="preloader">
         <div class="loader"></div>

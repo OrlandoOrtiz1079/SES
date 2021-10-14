@@ -14,7 +14,7 @@
                             <th>Carrera</th>
                             <th>Fecha</th>
                             <th>Hora entrada</th>
-                            <th>Hora de salida: </th>
+                            <th> Hora de salida:</th>
                         </tr>
                     </thead>
                     <tbody>
