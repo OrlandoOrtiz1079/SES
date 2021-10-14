@@ -1,7 +1,7 @@
 <div class="error-area text-center">
     <div class="container">
         <div class="error-content">
-            <!-- <h2>404</h2> -->
+            <h1 style="color: red;">ERROR 404</h1>
             
             <img class="w-50" src="vistas/assets/images/author/Gunter-404.svg">
             <p>Ooops! Algo salio mal.</p>

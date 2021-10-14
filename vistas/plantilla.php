@@ -71,8 +71,6 @@ CUERPO DOCUMENTO
             $_GET["ruta"] == "Registro" ||
             $_GET["ruta"] == "Accesos" ||
             $_GET["ruta"] == "Accesogeneral" ||
-            $_GET["ruta"] == "Directorio" ||
-            $_GET["ruta"] == "Jerarquia" ||
             $_GET["ruta"] == "CerrarSesion"
         ) {
 

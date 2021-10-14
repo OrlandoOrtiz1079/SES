@@ -1,10 +1,11 @@
+  
   <!-- main header area start   -->
-  <div class="mainheader-area">
+  <div class="mainheader-area" style="padding-top: 12px;">
       <div class="container">
           <div class="row align-items-center">
               <div class="col-md-3 d-none d-md-block">
                   <div class="logo">
-                      <a href="Inicio"><img src="vistas/assets/images/icon/logo-1.svg" alt="logo"></a>
+                      <!-- <a href="Inicio"><img src="vistas/assets/images/icon/logo-1.svg" alt="logo"></a> -->
                       <a href="Inicio" class="ml-3"><img src="vistas/assets/images/icon/LogoDSC.svg" alt="logo"></a>
                   </div>
               </div>
@@ -37,20 +38,15 @@
                                   <a href="Registro"><i class="fas fa-user-plus fa-2x" style="color: #845ef7;"></i><span><strong>Registro</strong></span></a>
                               </li>
                               <li>
-                                  <a href="Accesos"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Accesos del dia</strong></span></a>
+                                  <a href="Accesos"><i class="fa fa-clipboard-list fa-2x" style="color: #845ef7;"></i><span><strong>Accesos del dia</strong></span></a>
                               </li>
                               <li>
                                   <a href="Accesogeneral"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Acceso General</strong></span></a>
                               </li>
                               <li>
-                                  <a href="Directorio"><i class="fa fa-phone fa-2x" style="color: #845ef7;"></i><span><strong> Directorio</strong></span></a>
+                                  <a href="CerrarSesion"><i class="fa fa-sign-out-alt fa-2x" style="color: #845ef7;"></i><span><strong> Cerrar Sesion</strong></span></a>
                               </li>
-                              <li>
-                                  <a href="Jerarquia"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong> Jerarquia</strong></span></a>
-                              </li>
-                              <li>
-                                  <a href="Jerarquia"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong> Aulas</strong></span></a>
-                              </li>
+                              
                           </ul>
                       </nav>
                   </div>
