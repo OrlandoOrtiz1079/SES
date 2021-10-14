@@ -1,11 +1,9 @@
 <div class="col-12 mt-3">
     <div class="card">
-        <center>
-            <h2 class="ml-4">Alumnos en acceso</h2>
-        </center>
+        <h1 style="background-color: #007BFF; padding: 10px;color: white;" class=" text-center">Alumnos en acceso del dia</h1>
         <div class="card-body">
             <!-- <h1 class="header-title">Usuarios</h1> -->
-            <div class=" datatable-primary">
+            <div class="datatable-primary">
                 <table class="text-center tablaES">
                     <thead class="text-capitalize">
                         <tr>
@@ -16,7 +14,7 @@
                             <th>Carrera</th>
                             <th>Fecha</th>
                             <th>Hora entrada</th>
-                            <th>Hora salida</th>
+                            <th>Hora de salida: </th>
                         </tr>
                     </thead>
                     <tbody>

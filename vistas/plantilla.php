@@ -8,7 +8,7 @@ session_start();
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SISTEMA DE ENTRADA Y SALIDA</title>
+    <title>SISTEMA DE CONTROL DE E/S</title>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
@@ -69,7 +69,7 @@ CUERPO DOCUMENTO
         if (
             $_GET["ruta"] == "Inicio" ||
             $_GET["ruta"] == "Registro" ||
-            $_GET["ruta"] == "Residentes" ||
+            $_GET["ruta"] == "Accesos" ||
             $_GET["ruta"] == "Docentes" ||
             $_GET["ruta"] == "Directorio" ||
             $_GET["ruta"] == "Jerarquia" ||
@@ -122,9 +122,6 @@ CUERPO DOCUMENTO
     <script src="vistas/assets/js/plugins.js"></script>
     <script src="vistas/assets/js/scripts.js"></script>
     <script src="vistas/assets/js/table.js"></script>
-  
-
-
 </body>
 
 </html>

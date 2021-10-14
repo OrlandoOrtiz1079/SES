@@ -20,7 +20,7 @@
       </div>
   </div>
 
-  
+
   <!-- main header area end  
   header area start   -->
   <div class="header-area header-bottom">
@@ -37,7 +37,7 @@
                                   <a href="Registro"><i class="fas fa-user-plus fa-2x" style="color: #845ef7;"></i><span><strong>Registro</strong></span></a>
                               </li>
                               <li>
-                                  <a href="Residentes"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Residentes</strong></span></a>
+                                  <a href="Accesos"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Accesos del dia</strong></span></a>
                               </li>
                               <li>
                                   <a href="Docentes"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong>Docentes</strong></span></a>
@@ -51,8 +51,6 @@
                               <li>
                                   <a href="Jerarquia"><i class="fa fa-users fa-2x" style="color: #845ef7;"></i><span><strong> Aulas</strong></span></a>
                               </li>
-
-
                           </ul>
                       </nav>
                   </div>

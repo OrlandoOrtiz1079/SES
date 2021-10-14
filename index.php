@@ -14,7 +14,7 @@ require_once "controladores/config.controlador.php";
 // require_once "controladores/inicio.controlador.php";
 
 require_once "modelos/usuarios.modelo.php";
-require_once "modelos/residentes.modelo.php";
+require_once "modelos/acceso.modelo.php";
 require_once "modelos/docentes.modelo.php";
 require_once "modelos/directorio.modelo.php";
 require_once "modelos/jerarquia.modelo.php";

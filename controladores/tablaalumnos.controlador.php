@@ -2,7 +2,6 @@
 
 class ControladorMostrarAlunmos
 {
-
     /*=============================================
     MOSTRAR TODOS LOS ALUMNOS
     =============================================*/
@@ -13,12 +12,10 @@ class ControladorMostrarAlunmos
         $Object->setTimezone(new DateTimeZone('America/Mexico_City'));
         $DateEntrada = $Object->format("d-m-Y");
         $tabla = "alumnos";
-
-        // $tabla = "residentes";
         $item = null;
         $valor = "";
 
-        $respuesta = ModeloMostrarAlumnos::MdlMostrarAlumnos($tabla, $item, $valor);
+        $respuesta = ModeloMostrarAlumnos::MdlMostrarAlumnos($tabla, $item, $valor, $DateEntrada);
 
         foreach ($respuesta as $key => $value) {
             echo ' <tr class="table-success">
@@ -28,17 +25,17 @@ class ControladorMostrarAlunmos
                             <td>' . $value["carrera"] . '</td>
                             <td>' . $value["entrada"] . '</td>
                             <td>' . $value["enhora"] . '</td>
-                            <td>'?>
+                            <td>' ?>
                                  <?php
                                     if (empty($value["sahora"])) {
                                         echo "Dentro del Tec";
                                     } else {
                                         echo $value["sahora"];
                                     }
-                                ?>
+                                    ?>
                                 <?php
-                            '</td>
+                                '</td>
                     </tr>';
-        }
-    }
-}
+                            }
+                        }
+                    }
